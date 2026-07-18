@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I SEE YOU</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <p id="playerstxt">Players online: <span class="playerson" id="players-on"></span></p>
+        <div class="header-center">
+            <img class="eye eye-left" src="images/purpleeye.png" alt="I SEE YOU">
+            <h1>I SEE YOU</h1>
+            <img class="eye" src="images/purpleeye.png" alt="I SEE YOU">
+        </div>
+        <button class="btn-exit" id="btn-exit" onclick="sairDaSala()">Sair da sala</button>
+        
+    </header>
+
+    <div class="infos">
+        <span>O mestre está planejando...</span>
+    </div>
+
+    <div class="chat" id="chat">
+        <div class="message-box" data-author="Master">
+            <span class="usermessage" data-author="Master">
+                Mestre
+            </span>
+            <span class="message">
+                Bem-vindo. Sinta-se à vontade, tanto quanto este lugar permite. Eu farei o possível para guiá-lo da melhor forma... embora nem tudo dependa de mim.
+            </span>
+        </div>
+    </div>
+
+    <div class="inputbox">
+        <textarea class="inputtxt" id="inputtxt" placeholder="Digite sua mensagem..."></textarea>
+        <button class="inputbut" onclick="sendMessage()">Enviar</button>
+    </div>
+
+    <footer>
+        <span>Este é o footer</span>
+    </footer>
+
+
+    <!-- MODAL ENTRAR NA SALA -->
+    <div class="modal" id="enter-modal">
+        <div class="modal-body">
+            <div id="modal-header">
+                
+            </div>
+            <form id="modal-form">
+            <div class="modal-options">
+                <div class="field">
+                    <div class="field-input">
+                        <span>Username:</span>
+                        <input class="modal-input" type="text" id="input-username">
+                    </div>     
+                    <span class="text-error" id="user-error"></span>         
+                </div>
+                <div class="field">
+                    <div class="field-input" id="select-sala">
+                        <span>Sala:</span>
+                        <div class="select-list" role="radiogroup" aria-label="Escolha uma sala" id="select-list">
+                            <!-- <label class="select-list-item">
+                                <input type="radio" name="sala" value="1">
+                                It sees everything
+                                <div class="players-sala">
+                                    <svg class="user-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="8" r="4"/>
+                                        <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8v0H4v0z"/>
+                                    </svg>
+                                    <span data-sala="1">0</span>
+                                </div>   
+                            </label>
+                            <label class="select-list-item">
+                                <input type="radio" name="sala" value="2">
+                                No shadow hides you
+                                <div class="players-sala">
+                                    <svg class="user-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="8" r="4"/>
+                                        <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8v0H4v0z"/>
+                                    </svg>
+                                    <span data-sala="2">0</span>
+                                </div>
+                            </label>
+                            <label class="select-list-item">
+                                <input type="radio" name="sala" value="3">
+                                Always watching
+                                <div class="players-sala">
+                                    <svg class="user-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="8" r="4"/>
+                                        <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8v0H4v0z"/>
+                                    </svg>
+                                    <span data-sala="3">0</span>
+                                </div>
+                            </label>
+                            <label class="select-list-item">
+                                <input type="radio" name="sala" value="4">
+                                It already knows
+                                <div class="players-sala">
+                                    <svg class="user-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="8" r="4"/>
+                                        <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8v0H4v0z"/>
+                                    </svg>
+                                    <span data-sala="4">0</span>
+                                </div>
+                            </label> -->  
+                        </div>
+                    </div>
+                    <span class="text-error" id="sala-error"></span> 
+                </div>
+                <button id="enter" type="button" onclick="entrarNaSala()">Entrar</button>
+            </form>
+            </div>
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>
