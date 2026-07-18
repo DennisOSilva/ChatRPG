@@ -1,0 +1,47 @@
+# Visual Studio
+.vs/
+
+# Code Analysis temp
+CodeChunk/
+SemanticSymbols/
+
+# Build results
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+ARM/
+ARM64/
+
+# User files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+.nuget/
+
+# Backup
+*.bak
+*.orig
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# Other auto-generated
+Generated Files/
+
+# Configurações sensíveis
+appsettings.json
+appsettings.Development.json
